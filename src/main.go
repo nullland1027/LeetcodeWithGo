@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"leetcode/src/dp"
+	"leetcode/src/backtrack"
 	"math"
 	"sort"
 )
@@ -102,7 +102,5 @@ func generate(numRows int) [][]int {
 }
 
 func main() {
-	values := []int{8, 6, 7, 5}
-	weights := []int{2, 1, 2, 1}
-	fmt.Println(dp.ZeroOneKnapsack(7, values, weights))
+	backtrack.FindTargetSumWays([]int{1, 1, 1, 1, 1}, 3)
 }
