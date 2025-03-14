@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"leetcode/src/backtrack"
+	"leetcode/src/basicSort"
 	"math"
+	"math/rand"
 	"sort"
 )
 
@@ -102,5 +103,10 @@ func generate(numRows int) [][]int {
 }
 
 func main() {
-	backtrack.FindTargetSumWays([]int{1, 1, 1, 1, 1}, 3)
+	randomSlice := make([]int, 0)
+	for i := 0; i < 20; i++ {
+		randomSlice = append(randomSlice, rand.Intn(100))
+	}
+	fmt.Println(randomSlice)
+	fmt.Println(basicSort.MergeSort(randomSlice))
 }
